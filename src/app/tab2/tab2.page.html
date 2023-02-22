@@ -12,6 +12,17 @@
       <ion-title size="large">Tab 2</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-list>
+    <ion-item>
+      <ion-label>{{compra.nombre}}</ion-label>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+      <ion-label slot="end">{{compra.precio}}</ion-label>
+    </ion-item>
+
+    <ion-button color="danger" slot="end" (click)="onDeleteCompra()">Eliminar</ion-button>
+    <ion-button color="primary" slot="end" (click)="onLessCompra()">-</ion-button>
+    <ion-button color="primary" slot="end" (click)="onMoreCompra()">+</ion-button>
+    <ion-label slot="end">{{cantidad}}</ion-label>
+
+  </ion-list>
 </ion-content>
